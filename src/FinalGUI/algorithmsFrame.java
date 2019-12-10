@@ -1,21 +1,22 @@
 /*
- 
-*Programmer : Amal Assem Dora .
-*experience :2 Years in Java programming language .
-*Education : fourth year in computer science departement in faculty of electronic engineering (2019/2020).
-*THis code to generate a cryptographic system by using technique caesar cipher & playfair cipher .
-
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package FinalGUI;
 
 import javax.swing.JOptionPane;
 
-public class ALGORITHMESframe extends javax.swing.JFrame {
+/**
+ *
+ * @author Options
+ */
+public class algorithmsFrame extends javax.swing.JFrame {
 
     /**
-     * Creates new form Encryption_Techniques_form
+     * Creates new form algorithmsFrame
      */
-    public ALGORITHMESframe() {
+    public algorithmsFrame() {
         initComponents();
     }
 
@@ -30,31 +31,29 @@ public class ALGORITHMESframe extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
         plain = new javax.swing.JTextField();
         cipher = new javax.swing.JTextField();
-        encrypt = new javax.swing.JButton();
-        decrypt = new javax.swing.JButton();
         key = new javax.swing.JTextField();
-        clear = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
         Function_Combo = new javax.swing.JComboBox<>();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        jComboBox2 = new javax.swing.JComboBox<>();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Encryption Techniques");
-        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        jLabel1.setText("Plain Text :");
+        jLabel1.setText("plaintext:");
 
-        jLabel2.setText("Cipher Text :");
+        jLabel2.setText("ciphertext:");
 
-        plain.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                plainActionPerformed(evt);
-            }
-        });
+        jLabel3.setText("key:");
+
+        jLabel4.setText("Algorithms:");
+
+        jLabel5.setText("functions:");
 
         cipher.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -62,151 +61,132 @@ public class ALGORITHMESframe extends javax.swing.JFrame {
             }
         });
 
-        encrypt.setText("Encryption");
-        encrypt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                encryptActionPerformed(evt);
-            }
-        });
-
-        decrypt.setText("Decryption");
-        decrypt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                decryptActionPerformed(evt);
-            }
-        });
-
-        clear.setText("Clear");
-        clear.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                clearActionPerformed(evt);
-            }
-        });
-
-        jLabel3.setText("Key :");
-
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Choose Algorithm", "Caesar Cipher", "Playfair Cipher", "Feistel Cipher", "DES", "RC4", "RSA" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
-            }
-        });
-
-        Function_Combo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Choose function", "AND", "OR", "XOR" }));
+        Function_Combo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Choose algorithm", "Ceaser", "Playfair", "DES", "RC4", "RSA" }));
         Function_Combo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Function_ComboActionPerformed(evt);
             }
         });
 
-        jLabel5.setText("choose function:");
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Choose function", "AND", "OR", "XOR" }));
+        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox2ActionPerformed(evt);
+            }
+        });
 
-        jLabel6.setText("choose algorithm:");
+        jButton1.setText("ENCRYPTION");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jButton2.setText("DECRYPTION");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
+        jButton3.setText("clear");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel5))
+                        .addGap(19, 19, 19)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(plain, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel1)
-                                        .addGap(49, 49, 49)
-                                        .addComponent(plain, javax.swing.GroupLayout.PREFERRED_SIZE, 367, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(0, 0, Short.MAX_VALUE)
+                                        .addComponent(jButton3)
+                                        .addGap(16, 16, 16))
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel2)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(key, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(cipher, javax.swing.GroupLayout.PREFERRED_SIZE, 367, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addGap(70, 70, 70)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(Function_Combo, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addGap(0, 0, Short.MAX_VALUE)))))
-                                .addGap(89, 89, 89)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(encrypt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(decrypt, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(0, 8, Short.MAX_VALUE))))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel3)
-                                    .addComponent(jLabel6))
-                                .addGap(0, 634, Short.MAX_VALUE)))
-                        .addGap(65, 65, 65))
+                                            .addComponent(cipher, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(key, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 167, Short.MAX_VALUE)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 109, Short.MAX_VALUE))))
+                                .addGap(27, 27, 27))))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel5)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(clear, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(95, 95, 95))))
+                        .addComponent(jLabel4)
+                        .addGap(45, 45, 45)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Function_Combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(plain, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(28, 28, 28)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel1)
-                            .addComponent(plain, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(49, 49, 49)
+                        .addGap(56, 56, 56)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel2)
-                            .addComponent(cipher, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(cipher, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(47, 47, 47)
-                        .addComponent(encrypt, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE)
+                        .addGap(7, 7, 7)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(50, 50, 50)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel3)
-                            .addComponent(key, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(70, 70, 70))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(decrypt, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(7, 7, 7)))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel3)
+                        .addComponent(key, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6))
+                    .addComponent(jLabel4)
+                    .addComponent(Function_Combo, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(54, 54, 54)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(86, 86, 86)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jButton3)
+                        .addGap(31, 31, 31))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel5)
-                            .addComponent(Function_Combo, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(25, 25, 25))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(clear)
-                        .addGap(44, 44, 44))))
+                            .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(17, 17, 17))))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void plainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_plainActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_plainActionPerformed
-
     private void cipherActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cipherActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cipherActionPerformed
 
-    private void encryptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_encryptActionPerformed
-        if (jComboBox1.getSelectedIndex() == 0) {
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+                if (Function_Combo.getSelectedIndex() == 0) {
             JOptionPane.showMessageDialog(null, "Enter the choice technology .", "Error", JOptionPane.ERROR_MESSAGE);
-        } else if (jComboBox1.getSelectedIndex() == 1) {
+        } else if (Function_Combo.getSelectedIndex() == 1) {
             String f;
             if (key.getText().equals("")) {
                 JOptionPane.showMessageDialog(null, "Enter the keyword please!"
@@ -218,7 +198,7 @@ public class ALGORITHMESframe extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Enter the text you want to "
                         + "be encoded ,please!", "Error", JOptionPane.ERROR_MESSAGE);
             }
-        } else if (jComboBox1.getSelectedIndex() == 2) {
+        } else if (Function_Combo.getSelectedIndex() == 2) {
             String s;
             if (key.getText().equals("")) {
                 JOptionPane.showMessageDialog(null, "Enter the keyword please!"
@@ -231,7 +211,7 @@ public class ALGORITHMESframe extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Enter the text you want to"
                         + " be encoded ,please!", "Error", JOptionPane.ERROR_MESSAGE);
             }
-        } else if (jComboBox1.getSelectedIndex() == 3) {
+        } else if (Function_Combo.getSelectedIndex() == 3) {
             String s;
             if (key.getText().equals("")) {
                 JOptionPane.showMessageDialog(null, "Enter the keyword please!\nkeyword must be string.", "Error", JOptionPane.ERROR_MESSAGE);
@@ -243,7 +223,7 @@ public class ALGORITHMESframe extends javax.swing.JFrame {
             } else {
                 JOptionPane.showMessageDialog(null, "Enter the text you want to be decoded ,please!", "Error", JOptionPane.ERROR_MESSAGE);
             }
-        } else if (jComboBox1.getSelectedIndex() == 4) {
+        } else if (Function_Combo.getSelectedIndex() == 4) {
             String s;
             if (key.getText().equals("")) {
                 JOptionPane.showMessageDialog(null, "Enter the keyword please!"
@@ -255,7 +235,7 @@ public class ALGORITHMESframe extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Enter the text you want to"
                         + " be encoded ,please!", "Error", JOptionPane.ERROR_MESSAGE);
             }
-        } else if (jComboBox1.getSelectedIndex() == 5) {
+        } else if (Function_Combo.getSelectedIndex() == 5) {
             String s;
             if (key.getText().equals("")) {
                 JOptionPane.showMessageDialog(null, "Enter the keyword please!"
@@ -267,7 +247,7 @@ public class ALGORITHMESframe extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Enter the text you want to"
                         + " be encoded ,please!", "Error", JOptionPane.ERROR_MESSAGE);
             }
-        } else if (jComboBox1.getSelectedIndex() == 6) {
+        } else if (Function_Combo.getSelectedIndex() == 6) {
             if (!(plain.getText().equals(""))) {
                 RSA rsa = new RSA();
 
@@ -278,16 +258,33 @@ public class ALGORITHMESframe extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Enter the text please!", "Error", JOptionPane.ERROR_MESSAGE);
             }
         }
-    }//GEN-LAST:event_encryptActionPerformed
+       
+    }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void decryptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_decryptActionPerformed
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        if (jComboBox1.getSelectedIndex() == 0) {
+        plain.setText("");
+        key.setText("");
+        cipher.setText("");
+        Function_Combo.setSelectedIndex(0);
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void Function_ComboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Function_ComboActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Function_ComboActionPerformed
+
+    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox2ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        if (Function_Combo.getSelectedIndex() == 0) {
             JOptionPane.showMessageDialog(null, "Enter the choice technology ."
                     + "", "Error", JOptionPane.ERROR_MESSAGE);
 
         }//caesar decryption
-        else if (jComboBox1.getSelectedIndex() == 1) {
+        else if (Function_Combo.getSelectedIndex() == 1) {
             String f;
             if (key.getText().equals("")) {
                 JOptionPane.showMessageDialog(null, "Enter the keyword please!"
@@ -301,7 +298,7 @@ public class ALGORITHMESframe extends javax.swing.JFrame {
             }
 
         } //playfair decryption
-        else if (jComboBox1.getSelectedIndex() == 2) {
+        else if (Function_Combo.getSelectedIndex() == 2) {
             String s;
             if (key.getText().equals("")) {
                 JOptionPane.showMessageDialog(null, "Enter the keyword please!"
@@ -315,7 +312,7 @@ public class ALGORITHMESframe extends javax.swing.JFrame {
                         + "decoded ,please!", "Error", JOptionPane.ERROR_MESSAGE);
             }
             //fiestel cipher
-        } else if (jComboBox1.getSelectedIndex() == 3) {
+        } else if (Function_Combo.getSelectedIndex() == 3) {
             String s;
             if (key.getText().equals("")) {
                 JOptionPane.showMessageDialog(null, "Enter the keyword please!"
@@ -330,7 +327,7 @@ public class ALGORITHMESframe extends javax.swing.JFrame {
                         + "decoded ,please!", "Error", JOptionPane.ERROR_MESSAGE);
             }
             //des cipher
-        } else if (jComboBox1.getSelectedIndex() == 4) {
+        } else if (Function_Combo.getSelectedIndex() == 4) {
             String s;
             if (key.getText().equals("")) {
                 JOptionPane.showMessageDialog(null, "Enter the keyword please!"
@@ -343,7 +340,7 @@ public class ALGORITHMESframe extends javax.swing.JFrame {
                         + "decoded ,please!", "Error", JOptionPane.ERROR_MESSAGE);
             }
             //rc4 cipher
-        } else if (jComboBox1.getSelectedIndex() == 5) {
+        } else if (Function_Combo.getSelectedIndex() == 5) {
             String s;
             if (key.getText().equals("")) {
                 JOptionPane.showMessageDialog(null, "Enter the keyword please!"
@@ -356,7 +353,7 @@ public class ALGORITHMESframe extends javax.swing.JFrame {
                         + "decoded ,please!", "Error", JOptionPane.ERROR_MESSAGE);
             }
             //RSA cipher
-        } else if (jComboBox1.getSelectedIndex() == 6) {
+        } else if (Function_Combo.getSelectedIndex() == 6) {
             if (!(cipher.getText().equals(""))) {
                 RSA rsa = new RSA();
                 System.out.println("cipher : " + cipher.getText());
@@ -366,24 +363,7 @@ public class ALGORITHMESframe extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Enter the text please!", "Error", JOptionPane.ERROR_MESSAGE);
             }
         }
-    }//GEN-LAST:event_decryptActionPerformed
-
-    private void clearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearActionPerformed
-        // TODO add your handling code here:
-        plain.setText("");
-        key.setText("");
-        cipher.setText("");
-        jComboBox1.setSelectedIndex(0);
-    }//GEN-LAST:event_clearActionPerformed
-
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-
-
-    }//GEN-LAST:event_jComboBox1ActionPerformed
-
-    private void Function_ComboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Function_ComboActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Function_ComboActionPerformed
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -402,21 +382,20 @@ public class ALGORITHMESframe extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ALGORITHMESframe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(algorithmsFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ALGORITHMESframe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(algorithmsFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ALGORITHMESframe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(algorithmsFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ALGORITHMESframe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(algorithmsFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ALGORITHMESframe().setVisible(true);
+                new algorithmsFrame().setVisible(true);
             }
         });
     }
@@ -424,15 +403,15 @@ public class ALGORITHMESframe extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> Function_Combo;
     private javax.swing.JTextField cipher;
-    private javax.swing.JButton clear;
-    private javax.swing.JButton decrypt;
-    private javax.swing.JButton encrypt;
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JTextField key;
     private javax.swing.JTextField plain;
     // End of variables declaration//GEN-END:variables
